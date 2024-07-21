@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Samsung S8",
+      "price": 5600,
+      "checked": true
+    },
+    {
+      "id": 3,
+      "name": "Iphone 11",
+      "price": 5603,
+      "checked": true
+    },
+    {
+      "name": "Sony",
+      "price": "4500",
+      "checked": false,
+      "id": 4
+    },
+    {
+      "name": "hp elitebook 840",
+      "price": "48366",
+      "checked": false,
+      "id": 7
+    },
+    {
+      "name": "Redmi 9",
+      "price": 5663,
+      "checked": false,
+      "id": 8
+    },
+    {
+      "name": "Redmi 9",
+      "price": 5663,
+      "checked": true,
+      "id": 9
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": false,
+      "id": 10
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": false,
+      "id": 11
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": true,
+      "id": 12
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": true,
+      "id": 13
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": false,
+      "id": 14
+    },
+    {
+      "name": "Redmi Note 9",
+      "price": 48550,
+      "checked": false,
+      "id": 15
+    },
+    {
+      "name": "Redmi note 10",
+      "price": 8896,
+      "checked": false,
+      "id": 16
+    }
+  ]
+}

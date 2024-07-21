@@ -1,0 +1,96 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-light">
+      <h5 class="card-title mb-0">Product List</h5>
+    </div>
+    <div class="card-body">
+      <div class="mb-3">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search products"
+            [(ngModel)]="keyword"
+          />
+          <button
+            class="btn btn-outline-success"
+            type="button"
+            (click)="searchProducts()"
+          >
+            <i class="bi bi-search"></i> Search
+          </button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-light">
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | currency }}</td>
+              <td>
+                <span
+                  [ngClass]="
+                    product.checked ? 'badge bg-success' : 'badge bg-secondary'
+                  "
+                >
+                  {{ product.checked ? "Checked" : "Unchecked" }}
+                </span>
+              </td>
+              <td>
+                <button
+                  (click)="handleCheckProduct(product)"
+                  class="btn btn-sm btn-outline-primary me-1"
+                  title="{{ product.checked ? 'Uncheck' : 'Check' }}"
+                >
+                  <i
+                    [class]="
+                      product.checked ? 'bi bi-check-circle' : 'bi bi-circle'
+                    "
+                  ></i>
+                </button>
+                <button
+                  (click)="handleUpdate(product)"
+                  class="btn btn-sm btn-outline-success"
+                  title="Edit"
+                >
+                  <i class="bi bi-pencil-fill"></i>
+                </button>
+                <button
+                  (click)="handleDelete(product)"
+                  class="btn btn-sm btn-outline-danger ms-1"
+                  title="Delete"
+                >
+                  <i class="bi bi-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="nav nav-pills">
+          <li
+            *ngFor="let page of [].constructor(this.totalPages); let i = index"
+          >
+            <button
+              (click)="handleGoToPage(i + 1)"
+              [ngClass]="
+                currentPage == i + 1
+                  ? 'btn btn-success ms-1'
+                  : 'btn btn-outline-success ms-1'
+              "
+            >
+              {{ i + 1 }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

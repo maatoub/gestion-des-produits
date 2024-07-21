@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header bg-light">
+      <h5 class="card-title mb-0">Edit Product</h5>
+    </div>
+    <div class="card-body">
+      <form
+        [formGroup]="productFormGroup"
+        *ngIf="productFormGroup"
+        (ngSubmit)="editProduct()"
+      >
+        <div class="mb-3">
+          <label for="productName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            formControlName="name"
+            placeholder="Enter product name"
+          />
+          <div
+            *ngIf="
+              productFormGroup.get('name')?.invalid &&
+              productFormGroup.get('name')?.touched
+            "
+            class="text-danger mt-1"
+          >
+            Please enter a valid product name.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="productPrice" class="form-label">Price</label>
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input
+              type="number"
+              class="form-control"
+              id="productPrice"
+              formControlName="price"
+              placeholder="Enter product price"
+            />
+          </div>
+          <div
+            *ngIf="
+              productFormGroup.get('price')?.invalid &&
+              productFormGroup.get('price')?.touched
+            "
+            class="text-danger mt-1"
+          >
+            Please enter a valid price.
+          </div>
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="productChecked"
+            formControlName="checked"
+          />
+          <label class="form-check-label" for="productChecked">Checked</label>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="productFormGroup.invalid"
+        >
+          <i class="bi bi-save me-1"></i> Save Product
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
