@@ -1,6 +1,12 @@
-# AppProducts
+# product management application
+## Page home
 ![img1](https://github.com/user-attachments/assets/650311ec-f531-4316-9d7d-445bd9703384)
-
+## Edit Product
+![img2](https://github.com/user-attachments/assets/ea20d669-399e-4cda-bd6c-72c599a6f837)
+## Add Product
+![img3](https://github.com/user-attachments/assets/d98f00d2-7e38-4183-82f2-9184c5e7a39f)
+## List of Products
+![img4](https://github.com/user-attachments/assets/77b52c4c-213f-4ae0-8f10-9b63f5bb3c9b)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.<
 <img src="captures/img.png"/>
