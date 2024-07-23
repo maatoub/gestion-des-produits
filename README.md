@@ -1,4 +1,6 @@
 # AppProducts
+![img1](https://github.com/user-attachments/assets/650311ec-f531-4316-9d7d-445bd9703384)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.<
 <img src="captures/img.png"/>
